@@ -7,13 +7,13 @@ os.system('cls')
 def main():
 
     print("""
-    ######################
-    ##                  ##
-    ##  1. rock...      ##
-    ##  2. paper...     ##
-    ##  3. scissors...  ##
-    ##                  ##
-    ######################
+    ###################
+    ##               ##
+    ##  1. rock      ##
+    ##  2. paper     ##
+    ##  3. scissors  ##
+    ##               ##
+    ###################
     """)
 
     # deletes the previous line
@@ -21,10 +21,10 @@ def main():
         sys.stdout.write('\x1b[1A')
         sys.stdout.write('\x1b[2K')
 
-    # get palyers moves
-    p1 = input("player 1 choose your move:  ")
+    # gets palyers moves
+    p1 = input("player 1 choose your move number:  ")
     deleteLine()
-    p2 = input("player 2 choose your move:  ")
+    p2 = input("player 2 choose your move number:  ")
     deleteLine()
 
     # checks if the input is valid or not
@@ -49,7 +49,21 @@ def main():
             print("player2 wins!!")
         elif p1 == "3" and p2 == "2":
             print("player1 wins!!")
-    input()
+
+    # asks for play again or exit
+    def exit():
+        playAgain = input(" \ndo you want to play again ? y/n \n")
+        if playAgain == "y":
+            os.system('cls')
+            main()
+        elif playAgain == "n":
+            sys.exit()
+        else:
+            exit()
+
+    # runs exit function
+    exit()
 
 
+# runs the program
 main()
