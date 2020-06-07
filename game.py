@@ -35,20 +35,23 @@ def main():
         if p1 == p2:
             print("that's a tie ...")
 
-        if p1 == "1" and p2 == "2":
-            print("player2 wins!!")
-        elif p1 == "1" and p2 == "3":
-            print("player1 wins!!")
+        if p1 == "1":
+            if p2 == "2":
+                print("player2 wins!!")
+            elif p2 == "3":
+                print("player1 wins!!")
 
-        if p1 == "2" and p2 == "1":
-            print("player1 wins!!")
-        elif p1 == "2" and p2 == "3":
-            print("player2 wins!!")
+        if p1 == "2":
+            if p2 == "1":
+                print("player1 wins!!")
+            elif p2 == "3":
+                print("player2 wins!!")
 
-        if p1 == "3" and p2 == "1":
-            print("player2 wins!!")
-        elif p1 == "3" and p2 == "2":
-            print("player1 wins!!")
+        if p1 == "3":
+            if p2 == "1":
+                print("player2 wins!!")
+            elif p2 == "2":
+                print("player1 wins!!")
 
     # asks for play again or exit
     def exit():
